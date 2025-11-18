@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    files:
+      - file: "products.json"
+        label: "Products List"
+        name: "productslist"
+        fields:
+          - { label: "Neon Outfit Price", name: "neon_price", widget: "string" }
+          - { label: "Template Bundle Price", name: "template_price", widget: "string" }
+          - { label: "Guide Price", name: "guide_price", widget: "string" }
+
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "settings.json"
+        label: "Site Settings"
+        name: "settings"
+        fields:
+          - { label: "Shop Title", name: "title", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "UPI ID", name: "upi", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
